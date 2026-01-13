@@ -1,0 +1,10 @@
+# Backend
+/backend/taskmanager/target
+/backend/taskmanager/.idea
+
+# Frontend
+/frontend/node_modules
+
+# Geral
+.env
+*.log
