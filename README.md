@@ -1,22 +1,20 @@
-🚀 Task Manager API
+🚀 Task Manager API:
 Sistema robusto de gerenciamento de tarefas desenvolvido para demonstrar competências em Desenvolvimento Back-end, DevOps (Docker) e Garantia de Qualidade (QA).
 
-📋 Sobre o Projeto
+📋 Sobre o Projeto:
 Esta API permite o ciclo completo de gestão de tarefas (CRUD). O diferencial técnico deste projeto é a sua arquitetura baseada em containers, garantindo que o sistema funcione de forma idêntica em qualquer ambiente de desenvolvimento.
 
-🛠️ Tecnologias e Ferramentas
+🛠️ Tecnologias e Ferramentas:
 Back-end: Java 17 com Spring Boot.
 
 Persistência: PostgreSQL.
-
 Infraestrutura: Docker e Docker Compose para orquestração de serviços.
-
 Qualidade/QA: Postman para testes de integração automatizados.
-
 Versionamento: Git e GitHub.
 
-🏗️ Como Executar a Aplicação
-Pré-requisitos
+🏗️ Como Executar a Aplicação:
+
+Pré-requisitos:
 Docker e Docker Compose instalados.
 
 Passo a passo
@@ -37,12 +35,9 @@ O projeto foi validado utilizando uma suíte de testes rigorosa no Postman, gara
 
 Endpoints Testados:
 POST /tasks: Criação de tarefas com validação de status 201 Created.
-
 GET /tasks: Listagem de todas as tarefas com validação de status 200 OK.
 
 Como rodar os testes:
-Localize o arquivo TaskManager_QA.postman_collection.json na pasta /Testes.
-
 Importe-o no Postman.
 
 Configure a variável de ambiente url para http://localhost:8080.
