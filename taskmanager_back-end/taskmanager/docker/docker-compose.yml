@@ -1,18 +1,27 @@
-version: "3.8"
+version: '3.8'
 
 services:
-  postgres:
-    image: postgres:16
-    container_name: taskmanager_postgres
-    restart: always
-    ports:
-      - "5433:5432"
+  db:
+    image: postgres:15
+    container_name: postgres-db
     environment:
       POSTGRES_DB: taskmanager
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 190307Vi
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5433:5432" # Porta 5433 no seu PC mapeia para a 5432 do container
 
-volumes:
-  postgres_data:
+  api:
+    build: 
+      context: ..          # Sobe um nível para ler o pom.xml e a pasta src
+      dockerfile: docker/Dockerfile
+    container_name: task-manager-api
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      # A API fala com o 'db' na porta interna 5432
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/taskmanager
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 190307Vi

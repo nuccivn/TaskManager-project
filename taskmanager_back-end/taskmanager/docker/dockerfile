@@ -1,0 +1,19 @@
+# Estágio de Build
+FROM maven:3.9-eclipse-temurin-17 AS build
+WORKDIR /app
+
+# Como o Dockerfile está em /docker, o comando 'docker-compose' 
+# vai enviar o contexto da raiz. Então copiamos tudo da raiz para /app.
+COPY . .
+
+# Compila o projeto gerando o arquivo JAR
+RUN mvn clean package -DskipTests
+
+# Estágio de Execução
+FROM eclipse-temurin:17-jdk
+WORKDIR /app
+# Copia o JAR que foi gerado no estágio anterior
+COPY --from=build /app/target/*.jar app.jar
+
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
