@@ -40,4 +40,5 @@ Utilize o Collection Runner para executar todos os testes simultaneamente.
 
 <img width="1668" height="900" alt="image" src="https://github.com/user-attachments/assets/f06367e2-7fe8-444d-a6fc-c0d3e39011d4" />
 <img width="1308" height="952" alt="image" src="https://github.com/user-attachments/assets/d51e7e7a-f2c5-489f-bc68-ba28f57291b5" />
-<img width="1308" height="952" alt="image" src="https://github.com/user-attachments/assets/378fdb2d-0adc-4a06-a6a2-2ace9c7e273c" />
+<img width="1311" height="952" alt="image" src="https://github.com/user-attachments/assets/bb2bd70a-1920-423f-9873-925679757ad3" />
+
