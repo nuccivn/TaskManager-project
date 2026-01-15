@@ -1,44 +1,58 @@
-📝 Task Manager API
-Este projeto é uma API robusta para gerenciamento de tarefas, desenvolvida com Spring Boot e PostgreSQL, totalmente containerizada com Docker e validada com suítes de testes de QA no Postman.
+🚀 Task Manager API
+Sistema robusto de gerenciamento de tarefas desenvolvido para demonstrar competências em Desenvolvimento Back-end, DevOps (Docker) e Garantia de Qualidade (QA).
 
-🚀 Tecnologias Utilizadas
-Java 17 & Spring Boot: Core da aplicação e gerenciamento de dependências.
+📋 Sobre o Projeto
+Esta API permite o ciclo completo de gestão de tarefas (CRUD). O diferencial técnico deste projeto é a sua arquitetura baseada em containers, garantindo que o sistema funcione de forma idêntica em qualquer ambiente de desenvolvimento.
 
-PostgreSQL: Banco de dados relacional para persistência.
+🛠️ Tecnologias e Ferramentas
+Back-end: Java 17 com Spring Boot.
 
-Docker & Docker Compose: Orquestração de containers para ambiente de desenvolvimento isolado.
+Persistência: PostgreSQL.
 
-Postman: Automação de testes de integração e Garantia de Qualidade (QA).
+Infraestrutura: Docker e Docker Compose para orquestração de serviços.
 
-📦 Como Rodar o Projeto
-Certifique-se de ter o Docker instalado.
+Qualidade/QA: Postman para testes de integração automatizados.
 
-No terminal, na raiz do projeto, execute:
+Versionamento: Git e GitHub.
+
+🏗️ Como Executar a Aplicação
+Pré-requisitos
+Docker e Docker Compose instalados.
+
+Passo a passo
+Clone o repositório:
+
+Bash
+
+git clone https://github.com/nuccivn/TaskManager-project.git
+Navegue até a pasta do projeto e suba os containers:
 
 Bash
 
 docker-compose up -d
-A API estará disponível em http://localhost:8080/tasks.
+A API estará pronta para receber requisições em: http://localhost:8080/tasks.
 
-🧪 Garantia de Qualidade (QA)
-O projeto inclui uma coleção de testes automatizados para garantir que todos os endpoints funcionem corretamente.
+🧪 Estratégia de QA (Testes de Integração)
+O projeto foi validado utilizando uma suíte de testes rigorosa no Postman, garantindo que a comunicação entre a API e o Banco de Dados esteja perfeita.
 
-Testes Realizados:
-POST: Validação de criação de tarefas com retorno 201 Created.
+Endpoints Testados:
+POST /tasks: Criação de tarefas com validação de status 201 Created.
 
-GET: Verificação da listagem de tarefas com retorno 200 OK.
-
-Scripts de Teste: Validação automática de esquema JSON e tempo de resposta.
+GET /tasks: Listagem de todas as tarefas com validação de status 200 OK.
 
 Como rodar os testes:
-Importe o arquivo TaskManager_QA.postman_collection.json (disponível na pasta /Testes) para o seu Postman.
+Localize o arquivo TaskManager_QA.postman_collection.json na pasta /Testes.
 
-Selecione o ambiente com a variável url configurada para http://localhost:8080.
+Importe-o no Postman.
 
-Utilize o Collection Runner para executar todos os testes simultaneamente.
+Configure a variável de ambiente url para http://localhost:8080.
 
+Execute o Collection Runner para visualizar os resultados verdes (PASS).
 
+📊 Evidências de Sucesso:
 <img width="1668" height="900" alt="image" src="https://github.com/user-attachments/assets/f06367e2-7fe8-444d-a6fc-c0d3e39011d4" />
 <img width="1308" height="952" alt="image" src="https://github.com/user-attachments/assets/d51e7e7a-f2c5-489f-bc68-ba28f57291b5" />
 <img width="1311" height="952" alt="image" src="https://github.com/user-attachments/assets/bb2bd70a-1920-423f-9873-925679757ad3" />
 
+✒️ Autor
+Vinícius Nucci Galvão - Desenvolvedor e QA - [https://www.linkedin.com/in/vinícius-nucci-galvão/]
